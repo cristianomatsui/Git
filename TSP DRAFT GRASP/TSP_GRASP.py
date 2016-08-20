@@ -23,5 +23,6 @@ while (line != 'Distance'):
         print(tipo)
             
     print("final")        
-    line = file.readline()
+    line = file.readline
+    #Coment
 
