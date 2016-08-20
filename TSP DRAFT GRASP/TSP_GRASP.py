@@ -1,15 +1,15 @@
-#def read_file(instance, num, tipo):
-	
+# #def read_file(instance, num, tipo):
+
 print("Informe o nome da instancia")
 instance = input()
-	
+
 file = open(instance, 'r')
 print('File opened')
 
 line = file.readline()
-	
-while ('Distance' not in line):
-        
+
+while 'Distance' not in line:
+
     if 'N: ' in line:
         (aux, num_Nodes) = line.split(" ")
         num_Nodes = int(num_Nodes)
@@ -25,5 +25,5 @@ while ('Distance' not in line):
     print("final")        
     line = file.readline()
     print(line)
-    #Coment
+#    #Coment
 
