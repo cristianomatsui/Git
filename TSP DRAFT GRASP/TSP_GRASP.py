@@ -8,7 +8,7 @@ print('File opened')
 
 line = file.readline()
 	
-while (line != 'Distance'):
+while ('Distance' not in line):
         
     if 'N: ' in line:
         (aux, num_Nodes) = line.split(" ")
@@ -23,6 +23,7 @@ while (line != 'Distance'):
         print(tipo)
             
     print("final")        
-    line = file.readline
+    line = file.readline()
+    print(line)
     #Coment
 
