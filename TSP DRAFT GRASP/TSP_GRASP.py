@@ -8,6 +8,7 @@ print('File opened')
 
 line = file.readline()
 
+# Leitura dos parâmetros N e WeightType
 while 'Distance' not in line:
 
     if 'N: ' in line:
@@ -21,9 +22,34 @@ while 'Distance' not in line:
         weightType = weightType.replace('\n', '').replace('\r', '')     
         tipo = weightType
         print(tipo)
-            
-    print("final")        
-    line = file.readline()
-    print(line)
-#    #Coment
 
+    line = file.readline()
+
+# Criação da matriz de adjacência
+Matrix = [0 for x in range(num)]
+for x in range(num):
+    line = file.readline()
+    line = line.split(" ",num)
+    del line[num]
+    Matrix[x] = line
+
+
+# Criação do vetor de demanda
+line = file.readline()
+while line:
+
+    if 'Demand' in line:
+        line = file.readline()
+        line = line.split(" ",num)
+        del line[num]
+        Demand = line
+        print (Demand)
+
+    if 'Draft' in line:
+        line = file.readline()
+        line = line.split(" ", num)
+        del line[num]
+        Draft = line
+        print(Draft)
+
+    line = file.readline()
