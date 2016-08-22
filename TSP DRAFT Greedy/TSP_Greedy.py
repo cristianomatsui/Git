@@ -79,6 +79,10 @@ while Load != 0:
     Load -= int(Demand[y])
     x = CandidateIndex
 
+    if Load == 0:
+        VisitedPorts.append(1)
+        TotalCost += int(Matrix[x][0])
+
 
 print ('TotalCost = ', TotalCost)
 print ('VisitedPorts = ', VisitedPorts)
